@@ -33,8 +33,8 @@ export default function Header() {
         </div>
         <div className="topbar_buttons" id="menu">
           {isMobile ? (
-            <button id="menuicon">
-              <img className="menu-icon-image" src="./images/navigation.png" alt="my image" onClick={handleMenuIconClick}/>
+            <button type= "button" id="menuicon">
+              <img className="menu-icon-image" src="./images/menu.png" alt="my image" onClick={handleMenuIconClick}/>
             </button>
           ) : (
             <>

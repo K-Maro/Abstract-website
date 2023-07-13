@@ -7,7 +7,9 @@ export default function Main(){
                     <input className="input1" placeholder="Search" type="text"></input>
                 </div>
             </section>    
-            <section className="MiddlePage"></section> 
+            <section className="MiddlePage">
+                
+            </section> 
         </main>    
     )
 }

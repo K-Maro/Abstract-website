@@ -11,9 +11,10 @@
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100vh;
+  
 }
 .main{
-  min-width: 400px;
+  min-width: 420px;
 }
 .header{
   position: relative;
@@ -21,7 +22,7 @@
   background: #000000;
   left: 0;
   z-index: 3;
-  min-width: 25rem;
+  min-width: 420px;
   color: #fff;
   font-weight: 700;
   font-size: 17px;
@@ -31,6 +32,10 @@
 }
 .footer{
   position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  min-width: 420px;
+  max-width: 100%;
   padding-bottom: 60px;
   color: white;
   background-color: #000000;
@@ -44,9 +49,27 @@
   padding-bottom: 100px;
 }
 .footer-column{
+  text-align: left;
+  width: 20%;
   display: inline-block;
   vertical-align: top;
   margin: 20px;
+}
+.footer-title{
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+}
+.footer a{
+  color: white;
+  display: block;
+  cursor: pointer;
+}
+.footer a:hover{
+  text-decoration: underline;
+}
+strong{
+  font-weight: bold;
 }
 .topbar_inner {
   display: flex;
@@ -168,10 +191,10 @@
 }
 
 .mobile_buttons {
-  position: fixed;
+  position: absolute;
   top: 100px;
   z-index: 3;
-  min-width: 100%; 
+  width: 100%; 
   background: #000000;
   color: #fff;
   font-weight: 700;
@@ -183,14 +206,21 @@
   min-height: 100px;
 }
 
-#menuicon .menu-icon-image {
-  max-width: 30px;
-  max-height: 30px; 
-  margin-top: auto; 
-  align-self: center; 
+#menuicon {
+  width: 30px; 
+  height: 30px;
+  border: 1px solid black; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
- 
 }
+.menu-icon-image{
+  width: 35px; 
+  height: 35px;
+  object-fit: contain;
+}
+
 
 .sectionTag{
   font-family: 'GT America Standard', sans-serif;
@@ -260,12 +290,21 @@
     width: 80%;
     font-size: 16px;
   }
+  .footer-column {
+    margin-right: 80px
+  }
 }
 
 @media screen and (max-width: 480px) {
   .input1 {
     width: 90%;
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width:1440px){
+  .footer-column{
+    width:15%;
   }
 }
 
