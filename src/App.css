@@ -1,20 +1,32 @@
-#root {
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  text-align: center;
+  font-family: 'GT America Standard', sans-serif;
 }
 
+
 .root-div{
-  position: absolute;
-  top: 50%;
+  /* margin: auto; */
+  position: relative;
+  /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 100vh;
-  
+  height: 100vh; */
 }
-.main{
-  min-width: 420px;
+h3{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 3rem 0 1rem;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+img{
+  vertical-align: middle;
 }
 .header{
   position: relative;
@@ -22,20 +34,19 @@
   background: #000000;
   left: 0;
   z-index: 3;
-  min-width: 420px;
   color: #fff;
   font-weight: 700;
   font-size: 17px;
   display: flex;
   min-height: 79px;
   flex-direction: column; 
+  
 }
 .footer{
   position: relative;
   font-size: 16px;
   line-height: 24px;
-  min-width: 420px;
-  max-width: 100%;
+  font-weight: 400;
   padding-bottom: 60px;
   color: white;
   background-color: #000000;
@@ -54,6 +65,12 @@
   display: inline-block;
   vertical-align: top;
   margin: 20px;
+
+}
+.footer-column-copyright{
+  position: absolute;
+  right: 0;
+  bottom: 0
 }
 .footer-title{
   font-size: 24px;
@@ -252,10 +269,65 @@ strong{
   left:15px;
   cursor: pointer;
 }
-.MiddlePage{
-  height: 500px;
-  background-color: #ffffff;
+.MiddlePage {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center; /* Align the items horizontally to the center */
 }
+
+.Container {
+  max-width: 1600px;
+  width: 80% !important;
+  text-align:center;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+
+}
+.ContainerItem {
+  display: grid;
+  grid-template-columns: 120px 1fr; /* 100px for ContainerIMG, 1fr for ContainerContent */
+ /* Align items vertically to the center */
+ 
+}
+.ContainerIMG {
+  grid-column: 1; /* Span the first column */
+  margin-top: 35px;
+
+}
+
+
+.ContainerContent {
+  text-align: left; /* Align the text inside ContainerContent to the left */
+  grid-column: 2; /* Span the second column */
+  word-wrap: break-word;
+}
+.ContainerContent_Text{
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 20px;
+  
+}
+.img1 {
+  max-height: 6rem;
+  margin-right: 30px;
+}
+
+
+
+
+
+/* <div className="ContainerItem">
+    <div className="ContainerIMG"></div>
+    <div className="ContainerContent">
+        <h3>Authenticate to Abstract</h3>
+        <p>Set up and configure SSO, SCIM, and Just-in-Time provisioning.</p>
+        <a>Learn More →</a>
+    </div>
+</div> */
 
 
 
@@ -266,9 +338,9 @@ strong{
     top: 0;    
   }
   #menuicon{
-    position: fixed;
-    left: 50px;
-    top: 40px;
+    position: relative;
+    left: 20px;
+    top: 15px;
   }
  
 }
@@ -291,7 +363,20 @@ strong{
     font-size: 16px;
   }
   .footer-column {
-    margin-right: 80px
+    margin-right: 80px;
+    align-self: center;
+  }
+  .footer-column-copyright{
+    bottom: 0px;
+    left: 0px;
+  }
+  .Container{
+    grid-template-columns: 1fr;
+    width: 90% !important;
+  }
+  .img1{
+    max-height: 5rem;
+    margin-right: 20px;
   }
 }
 
@@ -300,6 +385,13 @@ strong{
     width: 90%;
     font-size: 14px;
   }
+  .img1{
+    max-height: 4rem;
+    margin-right: 0;
+  }
+  .Container{
+    width: 100% !important;
+  }
 }
 
 @media screen and (max-width:1440px){
@@ -307,9 +399,3 @@ strong{
     width:15%;
   }
 }
-
-
-
-
-
-
