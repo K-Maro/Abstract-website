@@ -25,7 +25,7 @@ export default function Main(){
                         <div className="ContainerContent">
                             <h3>{item.title}</h3>
                             <p className="ContainerContent_Text">{item.text}</p>
-                            <a>Learn More →</a>
+                            <a className='ContainerContent_Link'>Learn More →</a>
                         </div>
 
                     </div>

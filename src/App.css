@@ -4,16 +4,6 @@
   font-family: 'GT America Standard', sans-serif;
 }
 
-
-.root-div{
-  /* margin: auto; */
-  position: relative;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100vh; */
-}
 h3{
   font-size: 24px;
   font-weight: 700;
@@ -50,7 +40,6 @@ img{
   padding-bottom: 60px;
   color: white;
   background-color: #000000;
-  font-family: 'GT America Standard', sans-serif;
 }
 .footer-container{
   margin: 0 auto;
@@ -202,21 +191,19 @@ strong{
   margin-right: 50px;
   
 }
-.sign_in:hover{
-  color: black;
-  background-color: white;
-}
+
 
 .mobile_buttons {
   position: absolute;
-  top: 100px;
+  top: 80px;
   z-index: 3;
   width: 100%; 
-  background: #000000;
+  background: #191a1b;
   color: #fff;
   font-weight: 700;
   font-size: 17px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -248,15 +235,19 @@ strong{
   font-weight: 400;
   margin: 0 0 1rem;
 }
+.sectionContainer{
+  display: grid;
+  place-items: center;
+}
 .input1{
   display: block;
-    width: 100%;
+    width: 120%;
     height: auto;
-    padding: 0.5em 1em;
+    padding: 0.7em 1em;
     font-size: 20px;
     font-family: "GT America Standard", sans-serif;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 30px;
     color: #000000;
     background-color: #fff;
     background-image: none;
@@ -275,7 +266,7 @@ strong{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: center; /* Align the items horizontally to the center */
+  justify-content: center;
 }
 
 .Container {
@@ -289,20 +280,20 @@ strong{
 }
 .ContainerItem {
   display: grid;
-  grid-template-columns: 120px 1fr; /* 100px for ContainerIMG, 1fr for ContainerContent */
- /* Align items vertically to the center */
+  grid-template-columns: 120px 1fr; 
+
  
 }
 .ContainerIMG {
-  grid-column: 1; /* Span the first column */
+  grid-column: 1;
   margin-top: 35px;
 
 }
 
 
 .ContainerContent {
-  text-align: left; /* Align the text inside ContainerContent to the left */
-  grid-column: 2; /* Span the second column */
+  text-align: left; 
+  grid-column: 2; 
   word-wrap: break-word;
 }
 .ContainerContent_Text{
@@ -311,52 +302,52 @@ strong{
   margin-bottom: 20px;
   
 }
+.ContainerContent_Link{
+  color: #4C5FD5;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.ContainerContent_Link:hover{
+  text-decoration: underline;
+}
 .img1 {
   max-height: 6rem;
   margin-right: 30px;
 }
-
-
-
-
-
-/* <div className="ContainerItem">
-    <div className="ContainerIMG"></div>
-    <div className="ContainerContent">
-        <h3>Authenticate to Abstract</h3>
-        <p>Set up and configure SSO, SCIM, and Just-in-Time provisioning.</p>
-        <a>Learn More →</a>
-    </div>
-</div> */
-
-
-
-@media (max-width: 360px) {
-
-  .topbar_logo-wrapper {
-    position: absolute; 
-    top: 0;    
+@media screen and (max-width:1440px){
+  .footer-column{
+    width:15%;
   }
-  #menuicon{
-    position: relative;
-    left: 20px;
-    top: 15px;
-  }
- 
 }
-@media (max-width: 645px) {
-  .sectionTag{
-    font-size: 60px;
-  }
- 
-}
-@media (max-width: 500px) {
-  .sectionTag{
-    font-size: 45px;
-  }
+@media (max-width: 1199px) {
+
   
- 
+  .sign_in, .request_button {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 1rem 0;
+    background: transparent;
+    border: none;
+  }
+  .request_button{
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    border-radius: 0;
+  }
+  .sign_in:hover, .request_button:hover{
+    color: rgba(161, 156, 156, 0.404);
+  }
 }
+@media (min-width: 1199px){
+  .sign_in:hover{
+    color: black;
+    background-color: white;
+  }
+}
+
+
+
 @media screen and (max-width: 768px) {
   .input1 {
     width: 80%;
@@ -379,7 +370,17 @@ strong{
     margin-right: 20px;
   }
 }
-
+@media (max-width: 645px) {
+  .sectionTag{
+    font-size: 60px;
+  }
+ 
+}
+@media (max-width: 499px) {
+  .sectionTag{
+    font-size: 45px;
+  }
+}
 @media screen and (max-width: 480px) {
   .input1 {
     width: 90%;
@@ -394,8 +395,17 @@ strong{
   }
 }
 
-@media screen and (max-width:1440px){
-  .footer-column{
-    width:15%;
+
+@media (max-width: 360px) {
+
+  .topbar_logo-wrapper {
+    position: absolute; 
+    top: 0;    
   }
+  #menuicon{
+    position: relative;
+    left: 20px;
+    top: 15px;
+  }
+ 
 }
